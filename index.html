@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Finance Goal Tracker</title>
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-icon">FT</div>
+          <div>
+            <h1>Vault Goals</h1>
+            <p>Finance Tracker</p>
+          </div>
+        </div>
+
+        <nav class="side-nav">
+          <a href="#" class="active">Overview</a>
+          <a href="#">Goals</a>
+          <a href="#">Savings</a>
+          <a href="#">Reports</a>
+        </nav>
+
+        <div class="side-note">
+          <span>💡</span>
+          <p>Small deposits build big progress.</p>
+        </div>
+      </aside>
+
+      <section class="dashboard">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Personal finance</p>
+            <h2>Build your savings plan</h2>
+          </div>
+
+          <div class="profile-pill">
+            <span>Samuel</span>
+            <div>SJ</div>
+          </div>
+        </header>
+
+        <section class="balance-card">
+          <div>
+            <p>Total Saved</p>
+            <h3 id="totalSaved">0</h3>
+            <span id="totalTarget">of €0 target</span>
+          </div>
+
+          <div class="balance-progress">
+            <div class="progress-ring">
+              <span id="averageProgress">0%</span>
+            </div>
+            <p>Average progress</p>
+          </div>
+        </section>
+
+        <section class="dashboard-grid">
+          <form id="goalForm" class="goal-form">
+            <div class="section-title">
+              <span>+</span>
+              <div>
+                <h3>Add new goal</h3>
+                <p>Create a new savings target.</p>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="goalNameInput">Goal name</label>
+              <input
+                type="text"
+                id="goalNameInput"
+                placeholder="Example: New car"
+              />
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label for="targetInput">Target (€)</label>
+                <input
+                  type="number"
+                  id="targetInput"
+                  placeholder="5000"
+                  min="1"
+                />
+              </div>
+
+              <div class="field-group">
+                <label for="savedInput">Saved (€)</label>
+                <input
+                  type="number"
+                  id="savedInput"
+                  placeholder="750"
+                  min="0"
+                />
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="categoryInput">Category</label>
+              <select id="categoryInput">
+                <option value="car">Car</option>
+                <option value="tech">Tech</option>
+                <option value="travel">Travel</option>
+                <option value="home">Home</option>
+                <option value="education">Education</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <button type="submit">Create Goal</button>
+          </form>
+
+          <article class="featured-card">
+            <p class="eyebrow">Featured goal</p>
+            <h3 id="featuredGoalName">No goal yet</h3>
+            <p id="featuredGoalMeta">
+              Create your first goal to see progress here.
+            </p>
+
+            <div class="featured-progress">
+              <div id="featuredProgressBar"></div>
+            </div>
+
+            <div class="featured-values">
+              <span id="featuredSaved">€0 saved</span>
+              <strong id="featuredPercent">0%</strong>
+            </div>
+          </article>
+        </section>
+
+        <section class="goals-section">
+          <div class="goals-header">
+            <div>
+              <p class="eyebrow">Your goals</p>
+              <h3>Savings roadmap</h3>
+            </div>
+
+            <div class="tools">
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search goals..."
+              />
+
+              <select id="filterInput">
+                <option value="all">All</option>
+                <option value="car">Car</option>
+                <option value="tech">Tech</option>
+                <option value="travel">Travel</option>
+                <option value="home">Home</option>
+                <option value="education">Education</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="goalsList" class="goals-list">
+            <!-- Goals will be rendered here -->
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
