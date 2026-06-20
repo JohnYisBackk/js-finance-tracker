@@ -19,7 +19,7 @@ A modern finance tracking application that helps users create savings goals, mon
 
 ---
 
-🔗 Live Demo: https://samueljahn.sk/projects/finance-goal-tracker/
+🔗 Live Demo: [Click to check demo](https://johnyisbackk.github.io/js-finance-tracker/)
 
 ---
 
